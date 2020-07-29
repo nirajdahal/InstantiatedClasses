@@ -1,0 +1,39 @@
+﻿ii> Instantiated Class
+
+- Generally dont put methods where model has been set in a class. Try to make methods in separate class
+- Overiding variable which instantiate same class doesnot remove first objected. Infact the varibale only holds
+	address of that object . So overiding it will be no issue
+
+	ex : List<PersonModel> people = new List<PersonModel>();
+            string firstName;
+
+            
+
+            //varibale holds addresss to new house not the house itself
+            do
+            {
+                Console.WriteLine("Hello what is your name");
+                firstName = Console.ReadLine();
+                if (firstName.ToLower() != "exit")
+                {
+                    PersonModel person = new PersonModel();
+                    person.FirstName = firstName;
+                    people.Add(person);
+                    //At this point the person variable gets blown away so we 
+                    //are able instantiate new persson model with same vairable
+                }
+                
+
+            } while (firstName.ToLower() !="exit");
+
+            foreach (PersonModel person in people)
+            {
+                Console.WriteLine(person.FirstName);
+            }
+
+
+- When we are passing object as an argument we are reffering to the same object that we are passing not the copy
+    ex: public static void GreetPerson(PersonModel person)
+
+* Prop Tip : In general, Instantiated Classes store data. Static Classes are for stateless processing. Generally in an 
+application instantiated classes are used more than static classes.
