@@ -1,7 +1,7 @@
 ﻿ii> Instantiated Class
 
-- Generally dont put methods where model has been set in a class. Try to make methods in separate class
-- Overiding variable which instantiate same class doesnot remove first objected. Infact the varibale only holds
+- Generally dont put methods where model has been set in a class. Try to keep methods in separate class
+- Overiding variable which instantiate same class doesnot remove first object. Infact the varibale only holds
 	address of that object . So overiding it will be no issue
 
 	ex : List<PersonModel> people = new List<PersonModel>();
